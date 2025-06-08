@@ -1,0 +1,756 @@
+html,
+body {
+  height: 100% !important;
+  min-height: 100vh;
+  /* Garantiza que el body ocupe toda la altura */
+  margin: 0;
+  /* Elimina márgenes del body */
+  display: flex;
+  /* Usamos flexbox en el body */
+  flex-direction: column;
+  /* Para apilar el contenido en columnas */
+}
+
+main {
+  min-height: 120vh;
+  padding-left: 10%;
+  margin-right: 10%;
+}
+
+/* Contenido principal */
+.main-content {
+  flex: 1;
+  /* Esto permite que el contenido principal ocupe todo el espacio disponible */
+  padding-bottom: 50px;
+  /* Para asegurarse de que no se solape con el footer */
+}
+
+header {
+  color: white !important;
+
+}
+
+
+.secondNavBar {
+  width: 2000px;
+  color: #ffffff;
+  background-color: #333333;
+  padding: 20px;
+  font-size: 24px;
+}
+
+
+.segudondoNavBar {
+  padding-left: 10% !important;
+  padding-right: 10% !important;
+}
+
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='white' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+
+
+.navbar-brand {
+  color: white !important;
+}
+
+.nav-pills .nav-link.active,
+.nav-pills .show>.nav-link {
+  color: #121708 !important;
+  ;
+  background-color: var(--bs-nav-pills-link-active-bg);
+  color: white !important;
+  background-color: #5D6363 !important;
+}
+
+.bg-body-tertiary {
+
+  background-color: #293737 !important;
+  padding-left: 10% !important;
+  padding-right: 10% !important;
+}
+
+
+.tituloTabla {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  border-bottom: 1px solid #dee2e6;
+}
+
+/* Hover gris claro en filas de la tabla */
+.table tbody tr:hover {
+  background-color: #D5DBDB !important;
+  cursor: pointer;
+}
+
+.table tbody tr:hover td,
+.table tbody tr:hover th {
+  background-color: #D5DBDB;
+}
+
+.tituloTablaContactosPacientes {
+  font-weight: bold;
+  font-size: 1.25rem;
+
+}
+
+.contenedorTablaContatos {
+  padding-left: 10%;
+  padding-right: 10%;
+  margin-top: 3vw;
+
+}
+
+.contenedorTablaCaja {
+
+  margin-top: 3vw;
+
+}
+
+a {
+  color: #212528 !important;
+
+}
+
+.bi-box-arrow-in-right:hover {
+  font-weight: 500;
+}
+
+.photo-card {
+  margin-top: 2vw;
+  margin-bottom: 2vw;
+  border: 1px solid #ced4da;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: box-shadow 0.3s;
+}
+
+
+
+.upload-card {
+  border: 2px dashed #ced4da;
+  color: #6c757d;
+  font-size: 2rem;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.upload-card:hover {
+
+  background-color: #f8f9fa;
+  color: #495057;
+}
+
+
+.photo-card.selected {
+  border: 2px solid #0d6efd;
+  /* azul Bootstrap */
+  box-shadow: 0 0 0 3px rgba(13, 110, 253, 0.25);
+}
+
+.photo-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  align-items: flex-start;
+}
+
+.buttonTransformContact {
+  border: none;
+  padding-left: 6px;
+  padding-right: 9px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  border-radius: 15%;
+  color: white;
+  background-color: #293737;
+}
+
+.buttonTransformContact:hover {
+  background-color: #5D6363;
+}
+
+.btn-primary {
+  --bs-btn-color: #fff;
+  --bs-btn-bg: #5d6363;
+  --bs-btn-border-color: #5d6363;
+
+  --bs-btn-hover-color: #fff;
+  --bs-btn-hover-bg: #4a4f4f;
+  /* un poco más oscuro para hover */
+  --bs-btn-hover-border-color: #434848;
+
+  --bs-btn-focus-shadow-rgb: 93, 99, 99;
+  /* base color sin # */
+
+  --bs-btn-active-color: #fff;
+  --bs-btn-active-bg: #3c4141;
+  --bs-btn-active-border-color: #353a3a;
+  --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+
+  --bs-btn-disabled-color: #fff;
+  --bs-btn-disabled-bg: #5d6363;
+  --bs-btn-disabled-border-color: #5d6363;
+}
+
+
+.bg-light {
+  --bs-bg-opacity: 1;
+  background-color: transparent !important;
+}
+
+.border {
+  border: none !important;
+}
+
+.nav-pills .nav-link {
+  border-top-left-radius: 0.5rem !important;
+  /* Ajusta el radio que desees */
+  border-top-right-radius: 0.5rem !important;
+  border-bottom-left-radius: 0 !important;
+  border-bottom-right-radius: 0 !important;
+  margin-top: 2vw !important;
+  /* Separación con el contenido superior */
+}
+
+.createContact:hover {
+  font-weight: 700 !important;
+  transition: 0.3ms;
+}
+
+.custom-btn {
+  color: #5d6363;
+  border: 1px solid #5d6363;
+  background-color: transparent;
+  transition: all 0.3s ease;
+}
+
+.custom-btn:hover {
+  background-color: #5d6363;
+  color: white;
+}
+
+input:focus {
+  outline: none;
+  box-shadow: 0 0 0 0.25rem #D5DBDB !important;
+  border-color: #B3B2AE !important;
+}
+
+.navbar-brand img {
+  max-height: 40px;
+  /* Ajusta según lo pequeño que lo quieras */
+  width: auto;
+  object-fit: contain;
+}
+
+
+
+/* Estilo general para todos los botones de paginación */
+.custom-pagination .page-link {
+  border: 1px solid #5d6363;
+  color: #5d6363;
+  border-radius: 0.5rem;
+  padding: 0.4rem 0.75rem;
+  background-color: transparent;
+  transition: all 0.3s ease;
+  min-width: 40px;
+  text-align: center;
+}
+
+/* Hover effect */
+.custom-pagination .page-link:hover {
+  background-color: #5d6363;
+  color: white;
+}
+
+/* Botón activo */
+.custom-pagination .page-link.active {
+  background-color: #5d6363;
+  color: white;
+  font-weight: bold;
+  pointer-events: none;
+}
+
+/* Íconos de navegación (primera, anterior, siguiente, última) */
+.custom-pagination .page-item button[data-action] {
+  border: none !important;
+  background-color: transparent;
+  font-size: 1.4rem;
+  color: #5d6363;
+  padding: 0.25rem 0.6rem;
+  min-width: 45px;
+}
+
+.custom-pagination .page-item button[data-action]:hover {
+  background-color: #f0f0f0;
+  border-radius: 50%;
+  color: #5d6363;
+}
+
+/* Extra separación para los íconos */
+.custom-pagination .page-item button[data-action] {
+  margin: 0 0.6rem;
+}
+
+/* Espaciado general reducido para todos los botones */
+.custom-pagination .page-item {
+  margin: 0 0.2rem;
+  /* menos espacio por defecto */
+}
+
+/* Espaciado extra para botones de íconos (prev, next, first, last) */
+.custom-pagination .page-item button[data-action] {
+  border: none !important;
+  background-color: transparent;
+  font-size: 1.4rem;
+  color: #5d6363;
+  padding: 0.25rem 0.6rem;
+  min-width: 45px;
+  margin: 0 0.5rem;
+  /* MÁS espacio entre íconos y el resto */
+  transition: background-color 0.3s ease;
+}
+
+/* Hover y estilos activos */
+.custom-pagination .page-link:hover {
+  background-color: #5d6363;
+  color: white;
+}
+
+.custom-pagination .page-link.active {
+  background-color: #5d6363;
+  color: white;
+  font-weight: bold;
+  pointer-events: none;
+}
+
+.custom-pagination .page-item button[data-action]:hover {
+  background-color: #f0f0f0;
+  border-radius: 50%;
+  color: #5d6363;
+}
+
+.pagination-container {
+  margin-top: 3vw !important;
+}
+
+
+
+footer {
+  background-color: rgb(41, 55, 55);
+  color: white;
+  text-align: center;
+  padding: 1rem 0;
+  margin-top: 3vw;
+  width: 100%;
+}
+
+.sectionContactPatient {
+  margin-top: 3vw;
+}
+
+
+
+.centerButton {
+  text-align: center;
+  margin-top: 2rem;
+  /* opcional para espaciado */
+}
+
+.tabs {
+
+  margin-top: 2vw;
+  margin-bottom: 1vw;
+
+}
+
+.tabs button {
+  border: none;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top: 3px;
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+  background-color: white;
+  font-weight: 600;
+  color: #5D6363;
+
+}
+
+.activeSectionContactPatient {
+  background-color: #5D6363 !important;
+  color: white !important;
+}
+
+.notAvailableSection {
+  color: #D5DBDB !important;
+  cursor: default !important;
+}
+
+
+
+.contenedorFotos {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.5rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+/* Estilo del título */
+.contenedorFotos h4 {
+  margin: 0;
+  font-weight: 600;
+  color: #5d6363;
+}
+
+/* Estilo del ícono de cámara */
+.contenedorFotos i.bi-camera {
+  font-size: 1.6rem;
+  color: #fff;
+  background-color: #293737;
+  padding: 0.6rem;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Efecto hover (más claro) */
+.contenedorFotos i.bi-camera:hover {
+  background-color: #3a4a4a;
+}
+
+.galeria-fotos-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.grupo-fotos-card {
+  background-color: #5270c02c;
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.05);
+}
+
+.grupo-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.grupo-title {
+  margin-bottom: 0.3rem;
+  color: #293737;
+  font-weight: 600;
+}
+
+.grupo-meta,
+.grupo-descripcion {
+  margin-bottom: 0.5rem;
+  color: #5d6363;
+  font-size: 0.9rem;
+}
+
+.grupo-fotos-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.foto-card {
+  position: relative;
+  width: 140px;
+  height: 140px;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  background-color: #eaeaea;
+}
+
+.foto-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.eliminar-foto {
+  position: absolute;
+  top: 6px;
+  right: 6px;
+  padding: 0.2rem 0.4rem;
+}
+
+.nav.nav-pills.flex-column.flex-sm-row {
+  border-bottom: 1px solid #dee2e6;
+  /* gris clarito estilo Bootstrap */
+}
+
+#modalVerFoto .modal-content {
+  background-color: rgb(41, 55, 55);
+  padding: 1rem;
+  max-height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#modalFoto {
+  max-width: 100%;
+  max-height: 80vh;
+  object-fit: contain;
+}
+
+.bg-primary {
+  --bs-bg-opacity: 1;
+  background-color: rgb(41, 55, 55) !important;
+  margin-top: 1vw;
+  margin-left: 3px;
+}
+
+.login-card {
+  background-color: #ffffff;
+  border-radius: 1rem;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
+  padding: 2rem;
+  max-width: 400px;
+  width: 100%;
+  border: 1px solid #dee2e6;
+}
+
+.login-card h4 {
+  color: #5d6363;
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+  text-align: center;
+}
+
+.form-control {
+  border-radius: 0.5rem;
+}
+
+.btn-login {
+  background-color: #5d6363 !important;
+  color: #fff !important;
+  border-radius: 0.5rem;
+}
+
+.btn-login:hover {
+  background-color: #4a4f4f !important;
+}
+
+.form-text {
+  font-size: 0.875rem;
+  color: #6c757d;
+}
+
+.text-muted {
+  font-size: 0.875rem;
+}
+
+.login-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 80vh;
+
+}
+
+/* Puedes añadir esto en tu archivo style.css */
+.hidden-menu {
+  display: none !important;
+}
+
+.expanded-content {
+  width: 100% !important;
+  flex: 0 0 100% !important;
+  max-width: 100% !important;
+}
+
+/* Estilo base del menú lateral */
+/* Estilo base del menú lateral */
+.admin-menu {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  position: relative;
+}
+
+/* Menú vertical en pantallas grandes (>=989px) */
+@media (min-width: 1000px) {
+  .admin-menu {
+    flex-direction: column;
+    position: sticky;
+    top: 0;
+    width: 20%;
+    min-height: 100vh;
+    border-right: var(--bs-border-width) var(--bs-border-style) var(--bs-border-color) !important;
+  }
+
+  #contenidoAdministracion {
+    width: 80%;
+    margin-left: 0;
+  }
+}
+
+/* Menú horizontal en pantallas pequeñas (<989px) */
+@media (max-width: 1000px) {
+  .admin-menu {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+    min-height: auto !important;
+    border-right: none !important;
+    border-bottom: 1px solid #dee2e6;
+  }
+
+  .admin-menu h6 {
+    display: none;
+    /* Oculta el título "Administración" en móvil */
+  }
+
+  #menuLateral {
+    flex-direction: row !important;
+    width: 100%;
+  }
+
+  #menuLateral .nav-item {
+    margin-right: 1rem;
+  }
+
+  #contenidoAdministracion {
+    width: 100%;
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 1000px) {
+  .admin-menu {
+    min-height: auto !important;
+    border-right: none !important;
+  }
+
+  .min-vh-100 {
+    min-height: auto !important;
+  }
+
+  .border-end {
+    border-right: none !important;
+  }
+
+
+}
+
+.panel-menu{
+ padding-top: 5vw !important;
+ background-color: rgb(228, 228, 228);
+ color: rgb(36, 36, 36);
+}
+
+.panel-content{
+  padding-top: 5vw !important;
+}
+
+.panel-menu a{
+ color: rgb(29, 29, 29) !important;
+}
+
+@media (min-width: 901px) {
+  .panel-wrapper {
+    display: flex;
+  }
+
+  .panel-menu {
+    width: 250px;
+    padding: 1rem;
+    border-right: 1px solid #dee2e6;
+  }
+
+  .panel-content {
+    flex-grow: 1;
+    padding: 1.5rem;
+  }
+
+  .panel-menu-top {
+    display: none;
+  }
+}
+
+@media (max-width: 900px) {
+  .panel-wrapper {
+    display: block;
+  }
+
+  .panel-menu {
+    display: none;
+  }
+
+  .panel-menu-top {
+    display: block;
+    background-color: #f8f9fa;
+    border-bottom: 1px solid #dee2e6;
+    padding: 0.5rem 1rem;
+  }
+
+  .panel-menu-top a {
+    margin-right: 1rem;
+    text-decoration: none;
+    color: #212529;
+  }
+}
+
+.panel-menu a {
+  display: block;
+  color: #212529;
+  text-decoration: none;
+  margin-bottom: 0.75rem;
+}
+
+.panel-menu a:hover {
+  font-weight: 500;
+}
+
+.activea{
+  font-weight: 500;
+  border-bottom: 1px solid rgb(54, 54, 54);
+}
+
+.nav-pills .nav-link {
+    
+    color: black;
+}
+
+.centerTransaccion {
+    display: flex;
+    flex-direction: column;      /* Coloca los hijos uno debajo del otro */
+    justify-content: center;     /* Centra verticalmente */
+    align-items: center;         /* Centra horizontalmente */
+    height: 100%;               /* O una altura fija si lo necesitas */
+    text-align: center;          /* Centra el texto dentro de los hijos */
+}
+
+.btn-outline-danger{
+  border-radius: none;
+  border: none !important;
+  font-weight: 700 !important;
+}
+
+.btn-outline-danger:hover{
+  font-weight: 500;
+}
+
+.bg-dark{
+    --bs-bg-opacity: 1;
+    background-color: #293737 !important
+}

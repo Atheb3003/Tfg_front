@@ -1,0 +1,552 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Contactos</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="resources/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <style></style>
+</head>
+
+<body>
+
+    <header>
+        <nav class="navbar bg-body-tertiary">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#"><img src="resources/img/logo.png" alt=""></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation"
+                    style="color: white">
+                    <span style="color: white" class="navbar-toggler-icon"></span>
+                </button>
+                <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar"
+                    aria-labelledby="offcanvasNavbarLabel">
+                    <div class="offcanvas-header">
+                        <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Menú</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="index.html">Página principal</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="contactos.html">Contactos</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="pacientes.html">Pacientes</a>
+                            </li>
+
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                    aria-expanded="false">
+                                    Administración
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#">Generar un presupuesto</a></li>
+                                    <li><a class="dropdown-item" href="#">Reservas</a></li>
+                                    <li><a class="dropdown-item" href="#">Realizar una reserva de cirugía</a></li>
+                                    <li>
+                                        <hr class="dropdown-divider">
+                                    </li>
+                                    <li><a class="dropdown-item" href="#"><i class="bi bi-shop-window"></i></a></li>
+                                </ul>
+                            </li>
+                        </ul>
+
+
+                        <div class="mt-4 text-center">
+                            <button id="logoutBtnCustom" class="btn btn-danger">
+                                <i class="bi bi-box-arrow-right me-2"></i> Cerrar sesión
+                            </button>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="segudondoNavBar">
+        <nav class="nav nav-pills flex-column flex-sm-row">
+            <a class="flex-sm-fill text-sm-center nav-link" aria-current="page" href="contactos.html">Contactos</a>
+            <a class="flex-sm-fill text-sm-center nav-link active" href="pacientes.html">Pacientes</a>
+            <a class="flex-sm-fill text-sm-center nav-link" href="administracion.html">Administración</a>
+            <a class="flex-sm-fill text-sm-center nav-link disabled" aria-disabled="true">Caja</a>
+        </nav>
+    </div>
+
+
+    <main>
+        <!-- HTML: Sección Principal optimizada -->
+        <div id="Contactos" class="sectionContactPatient">
+            <div class="contact-header">
+                <h2 class="contact-name">James Williams</h2>
+                <p class="contact-date">Contacto: 20/07/2020</p>
+            </div>
+
+            <div class="tabs">
+                <button class="tablinks activeSectionContactPatient"
+                    onclick="openSection(event, 'Principal')">Principal</button>
+                <button class="tablinks" onclick="openSection(event, 'Fotos')">Fotos</button>
+                <button class="tablinks" onclick="openSection(event, 'Historial')">Historial</button>
+                <button class="tablinks notAvailableSection"
+                    onclick="openSection(event, 'Tratamientos')">Tratamientos</button>
+                <button class="tablinks notAvailableSection"
+                    onclick="openSection(event, 'Cirugias')">Protocolos</button>
+                <button class="tablinks notAvailableSection" onclick="openSection(event, 'Cirugias')">Cirugías</button>
+                <button class="tablinks" onclick="openSection(event, 'Presupuesto')">Presupuesto</button>
+            </div>
+
+            <div id="Principal" class="tabcontent" style="display: block;">
+                <form id="personalInfoForm" class="contactDetails">
+                    <fieldset class="mb-4">
+                        <legend>Datos Personales</legend>
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <label for="firstName" class="form-label">Nombre</label>
+                                <input type="text" class="form-control" id="firstName" name="firstName">
+                            </div>
+                            <div class="col-md-6">
+                                <label for="lastName" class="form-label">Apellidos</label>
+                                <input type="text" class="form-control" id="lastName" name="lastName">
+                            </div>
+                            <div class="col-md-4">
+                                <label for="nif" class="form-label">NIF/CIF</label>
+                                <input type="text" class="form-control" id="nif" name="nif">
+                            </div>
+                            <div class="col-md-4">
+                                <label for="birthDate" class="form-label">Fecha de Nacimiento</label>
+                                <input type="date" class="form-control" id="birthDate" name="birthDate">
+                            </div>
+                            <div class="col-md-4">
+                                <label for="occupation" class="form-label">Ocupación</label>
+                                <input type="text" class="form-control" id="occupation" name="occupation">
+                            </div>
+                        </div>
+                    </fieldset>
+
+                    <fieldset class="mb-4">
+                        <legend>Dirección</legend>
+                        <div class="row g-3">
+                            <div class="col-md-4">
+                                <label for="country" class="form-label">País</label>
+                                <input id="country" name="country" class="form-control">
+                            </div>
+                            <div class="col-md-4">
+                                <label for="province" class="form-label">Provincia</label>
+                                <input type="text" class="form-control" id="province" name="province">
+                            </div>
+                            <div class="col-md-4">
+                                <label for="municipality" class="form-label">Población</label>
+                                <input type="text" class="form-control" id="municipality" name="municipality">
+                            </div>
+                            <div class="col-md-6">
+                                <label for="direction" class="form-label">Dirección</label>
+                                <input type="text" class="form-control" id="direction" name="direction">
+                            </div>
+                        </div>
+                    </fieldset>
+
+                    <fieldset class="mb-4">
+                        <legend>Contacto</legend>
+                        <div class="row g-3">
+                            <div class="col-md-4">
+                                <label for="phone" class="form-label">Teléfono 1</label>
+                                <input type="tel" class="form-control" id="phone" name="phone">
+                            </div>
+                            <div class="col-md-4">
+                                <label for="secondPhone" class="form-label">Segundo 2</label>
+                                <input type="text" class="form-control" id="secondPhone" name="secondPhone">
+                            </div>
+                            <div class="col-md-4">
+                                <label for="email" class="form-label">Correo Electrónico</label>
+                                <input type="email" class="form-control" id="email" name="email">
+                            </div>
+                            <div class="col-12">
+                                <label for="notes" class="form-label">Observaciones</label>
+                                <textarea class="form-control" id="notes" name="notes" rows="3"></textarea>
+                            </div>
+                        </div>
+                    </fieldset>
+
+                    <div class="centerButton">
+                        <button type="button" class="btn btn-primary" id="updateBtn">Actualizar</button>
+
+                    </div>
+
+
+                </form>
+            </div>
+
+            <!-- Sección Fotos -->
+            <div id="Fotos" class="tabcontent seccionFotos" style="display: none;">
+                <div class="contenedorFotos">
+                    <div>
+                        <h4>Galeria de fotos</h4>
+                    </div>
+                    <!-- Donde ya tienes esto -->
+                    <div>
+                        <i class="bi bi-camera fs-3 p-2" style="cursor: pointer;" data-bs-toggle="modal"
+                            data-bs-target="#modalNuevoGrupo"></i>
+                    </div>
+
+
+                </div>
+
+                <div class="galeria-fotos-container">
+
+                    <!-- Grupo de fotos -->
+                    <div class="grupo-fotos-card">
+                        <div class="grupo-header">
+                            <div>
+                                <h5 class="grupo-title">Título del grupo</h5>
+                                <p class="grupo-meta">
+                                    Tipo: <span class="grupo-tipo">Consulta</span> |
+                                    Fecha: <span class="grupo-fecha">2024-04-12</span>
+                                </p>
+                                <p class="grupo-descripcion">Esta es una descripción del grupo de fotos.</p>
+                            </div>
+                            <div>
+                                <button class="btn btn-sm btn-danger eliminar-grupo">
+                                    <i class="bi bi-trash"></i> Eliminar grupo
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Fotos del grupo -->
+                        <div class="grupo-fotos-grid">
+                            <div class="foto-card">
+                                <img src="resources/img/ejemplo1.jpg" alt="Foto 1" />
+                                <button class="btn btn-sm btn-outline-danger eliminar-foto">
+                                    <i class="bi bi-x-circle"></i>
+                                </button>
+                            </div>
+                            <div class="foto-card">
+                                <img src="resources/img/ejemplo2.jpeg" alt="Foto 2" />
+                                <button class="btn btn-sm btn-outline-danger eliminar-foto">
+                                    <i class="bi bi-x-circle"></i>
+                                </button>
+                            </div>
+                            <!-- + más fotos -->
+                        </div>
+                    </div>
+
+
+                    <!-- POP UP AÑADIR FOTOS.. -->
+
+
+                    <!-- Modal para crear grupo de fotos -->
+                    <div class="modal fade" id="modalNuevoGrupo" tabindex="-1" aria-labelledby="modalNuevoGrupoLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog modal-lg modal-dialog-centered">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="modalNuevoGrupoLabel">Nuevo Grupo de Fotos</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Cerrar"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <form id="formNuevoGrupo">
+                                        <div class="row g-3">
+                                            <div class="col-md-6">
+                                                <label for="grupoTitulo" class="form-label">Título</label>
+                                                <input type="text" class="form-control" id="grupoTitulo" required>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <label for="grupoTipo" class="form-label">Tipo</label>
+                                                <select class="form-select" id="grupoTipo">
+                                                    <option value="">Ninguno</option>
+                                                    <option value="consulta">Consulta</option>
+                                                    <option value="revision">Revisión</option>
+                                                </select>
+                                            </div>
+                                            <div class="col-12">
+                                                <label class="form-label">Fecha de creación</label>
+                                                <input type="text" class="form-control" id="grupoFecha" disabled>
+
+                                            </div>
+                                            <div class="col-12">
+                                                <label for="grupoDescripcion" class="form-label">Descripción</label>
+                                                <textarea class="form-control" id="grupoDescripcion"
+                                                    rows="2"></textarea>
+                                            </div>
+                                        </div>
+
+                                        <!-- Contenedor para fotos -->
+                                        <div class="photo-container d-flex flex-wrap gap-3 mt-3">
+                                            <div class="photo-card upload-card position-relative border rounded d-flex justify-content-center align-items-center"
+                                                style="width: 120px; height: 120px; cursor: pointer;"
+                                                onclick="document.getElementById('photoInput').click();">
+                                                <i class="bi bi-camera fs-1 text-muted"></i>
+                                                <input type="file" id="photoInput" class="d-none" accept="image/*"
+                                                    onchange="previewFoto(this)">
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="modal-footer justify-content-center">
+                                    <button type="button" class="btn btn-primary px-4"
+                                        onclick="guardarGrupoFotos()">Crear
+                                        Grupo</button>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- POP UP, para ampliar foto -->
+
+
+                    <div class="modal fade" id="modalVerFoto" tabindex="-1" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered modal-lg">
+                            <div class="modal-content bg-dark p-2" style="border: none; border-radius: 1rem;">
+                                <div class="modal-body text-center p-0">
+                                    <img id="modalFoto" src="" class="img-fluid rounded" alt="Foto ampliada">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- POP UP, para confirmación de eliminar foto -->
+
+                    <div class="modal fade" id="modalConfirmarEliminarFoto" tabindex="-1" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered">
+                            <div class="modal-content border-0">
+                                <div class="modal-header">
+                                    <h5 class="modal-title">Eliminar foto</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Cerrar"></button>
+                                </div>
+                                <div class="modal-body text-center">
+                                    <p>¿Estás seguro de que deseas eliminar esta foto?</p>
+                                    <button class="btn btn-danger me-2" id="confirmarEliminarFotoBtn">Sí,
+                                        eliminar</button>
+                                    <button class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- POP UP, para confirmación de eliminar grupo de fotos -->
+
+                    <div class="modal fade" id="modalConfirmarEliminarGrupo" tabindex="-1" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered">
+                            <div class="modal-content border-0">
+                                <div class="modal-header">
+                                    <h5 class="modal-title">Eliminar grupo de fotos</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Cerrar"></button>
+                                </div>
+                                <div class="modal-body text-center">
+                                    <p>¿Seguro que deseas eliminar este grupo de fotos completo?</p>
+                                    <button class="btn btn-danger me-2" id="confirmarEliminarGrupoBtn">Sí,
+                                        eliminar</button>
+                                    <button class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+
+                </div>
+
+
+            </div>
+
+            <!-- Sección Historial -->
+            <div id="Historial" class="tabcontent seccionFotos" style="display: none;">
+                <div class="contenedorFotos">
+                    <div>
+                        <h4>Historial médico</h4>
+                    </div>
+                    
+                    <div>
+                        <i class="bi bi-plus-square-dotted" style="font-size: 28px; padding-right: 1vw;"></i>
+                        <i class="bi bi-journal fs-3 p-2" style="cursor: pointer;" data-bs-toggle="modal"
+                            data-bs-target="#modalNuevaRevision"></i>
+                    </div>
+                </div>
+
+                <!-- Contenedor de revisiones -->
+                <div class="historial-revisiones mt-4 d-flex flex-column gap-4">
+
+                    <!-- Revisión individual -->
+                    <div class="grupo-fotos-card">
+                        <div class="grupo-header">
+                            <div>
+                                <h5 class="grupo-title">Revisión: Postoperatorio</h5>
+                                <p class="grupo-meta">
+                                    Protocolo: <span class="grupo-tipo">Sin protocolo</span> |
+                                    Fecha: <span class="grupo-fecha">2024-05-27</span>
+                                </p>
+                                <p class="grupo-descripcion">Paciente reporta mejoría significativa. Se ajusta
+                                    tratamiento
+                                    local.</p>
+                                <p class="grupo-productos"><strong>Productos utilizados:</strong> Lidocaína, Suero
+                                    fisiológico</p>
+                                <p class="grupo-fotos-opcional mt-2">
+                                    <button class="btn btn-sm btn-outline-secondary ver-fotos-revision"
+                                        data-fotos='["img1.jpg", "img2.jpg"]'>
+                                        <i class="bi bi-images"></i> Ver fotos (2)
+                                    </button>
+                                </p>
+
+                            </div>
+                            <div>
+                                <button class="btn btn-sm btn-danger eliminar-grupo">
+                                    <i class="bi bi-trash"></i> Eliminar revisión
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Repetir más revisiones según datos dinámicos -->
+                </div>
+                <div class="modal fade" id="modalGaleriaRevision" tabindex="-1" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered modal-lg">
+                        <div class="modal-content bg-dark p-3" style="border-radius: 1rem;">
+                            <div class="modal-header border-0">
+                                <h5 class="modal-title text-white">Fotos de la revisión</h5>
+                                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                                    aria-label="Cerrar"></button>
+                            </div>
+                            <div class="modal-body d-flex flex-wrap gap-3 justify-content-center"
+                                id="galeriaFotosRevision">
+                                <!-- Aquí se insertan dinámicamente las imágenes -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+
+            <!-- Modal para crear nueva revisión con grupo de fotos incluido -->
+            <div class="modal fade" id="modalNuevaRevision" tabindex="-1" aria-labelledby="modalNuevaRevisionLabel"
+                aria-hidden="true">
+                <div class="modal-dialog modal-lg modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="modalNuevaRevisionLabel">Nueva Revisión</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                aria-label="Cerrar"></button>
+                        </div>
+                        <div class="modal-body">
+                            <form id="formNuevaRevision">
+                                <div class="row g-3">
+                                    <!-- Tipo de revisión -->
+                                    <div class="col-md-6">
+                                        <label for="revisionTipo" class="form-label">Tipo de revisión</label>
+                                        <select class="form-select" id="revisionTipo">
+                                            <option value="">Seleccionar tipo</option>
+                                            <option value="1">Postoperatorio</option>
+                                            <option value="2">Seguimiento</option>
+                                            <option value="3">Inicial</option>
+                                        </select>
+                                    </div>
+
+                                    <!-- Fecha de revisión -->
+                                    <div class="col-md-6">
+                                        <label for="revisionFecha" class="form-label">Fecha</label>
+                                        <input type="date" class="form-control" id="revisionFecha" value="">
+                                    </div>
+
+                                    <!-- Productos utilizados -->
+                                    <!-- Productos utilizados -->
+                                    <div class="col-md-6">
+                                        <label for="revisionProductos" class="form-label">Productos utilizados</label>
+                                        <select class="form-select" id="revisionProductosSelector">
+                                            <option value="">Seleccionar producto</option>
+                                            <option value="1">Lidocaína</option>
+                                            <option value="2">Suero fisiológico</option>
+                                            <option value="3">Povidona</option>
+                                        </select>
+                                        <div id="productosSeleccionados" class="mt-2 d-flex flex-wrap gap-2"></div>
+                                    </div>
+
+                                    <!-- Protocolo detectado -->
+                                    <div id="panelProtocoloRevision" class="mt-4 border rounded bg-light p-3"
+                                        style="display: none;">
+                                        <h6 class="mb-3">💡 Este paciente tiene un protocolo asignado:</h6>
+                                        <ul class="list-group mb-3" id="listaTratamientosProtocoloRevision">
+                                            <!-- Se generará dinámicamente -->
+                                        </ul>
+                                    </div>
+
+
+
+                                    <!-- Observaciones -->
+                                    <div class="col-12">
+                                        <label for="revisionObservaciones" class="form-label">Observaciones</label>
+                                        <textarea class="form-control" id="revisionObservaciones" rows="3"></textarea>
+                                    </div>
+
+
+
+                                    <!-- Grupo de fotos asociado (reutilizando lógica de grupo de fotos) -->
+                                    <div class="col-12">
+                                        <label class="form-label">Añadir grupo de fotos</label>
+                                        <div class="photo-container d-flex flex-wrap gap-3 mt-2">
+                                            <div class="photo-card upload-card position-relative border rounded d-flex justify-content-center align-items-center"
+                                                style="width: 120px; height: 120px; cursor: pointer;"
+                                                onclick="document.getElementById('photoInputRevision').click();">
+                                                <i class="bi bi-camera fs-1 text-muted"></i>
+                                                <input type="file" id="photoInputRevision" class="d-none"
+                                                    accept="image/*" onchange="previewFotoRevision(this)">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="modal-footer justify-content-center">
+                            <button type="button" class="btn btn-primary px-4" onclick="guardarRevision()">Guardar
+                                revisión</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sección Presupuesto -->
+            <div id="Presupuesto" class="tabcontent" style="display: none;">
+                <div class="contenedorFotos">
+                    <div>
+                        <h4><i class="bi bi-wrench-adjustable"></i> En construcción..</h4>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- Otras secciones (Fotos, Historial, Tratamientos...) se quedan igual -->
+        </div>
+    </main>
+
+
+
+
+    <footer style="background-color: rgb(41, 55, 55); margin-top: 3vw;">
+        <div class="text-center text-white py-3">
+            &copy; Todos los derechos reservados.
+        </div>
+    </footer>
+
+
+
+    <script src="resources/js/checktoken.js"></script>
+    <script src="resources/js/paginaPaciente.js"></script>
+    <script src="resources/js/logout.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

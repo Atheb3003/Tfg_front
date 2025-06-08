@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generar PDF con Plantilla</title>
+</head>
+<body>
+    <form id="dataForm">
+        <label for="name">Nombre:</label>
+        <input type="text" id="name" name="name" required><br><br>
+
+        <label for="apellido">Apellidos:</label>
+        <input type="text" id="apellido" name="apellido" required><br><br>
+
+        <label for="documentoIdentidad">Documento de Identidad:</label>
+        <input type="text" id="documentoIdentidad" name="apellido" required><br><br>
+
+        <label for="coordinadora">Coordinadora: </label>
+        <input type="text" id="coordinadora" name="coordinadora"><br><br>
+
+        <label for="fecha"> Fecha: </label>
+        <input type="date" id="fecha" name="fecha"><br><br>
+
+        <label for="fechaCirujia">Fecha Cirujia: </label>
+        <input type="date" id="fechaCirujia" name="fechaCirujia"><br><br>    
+        
+        <hr>
+        <!-- -------------------------------------------------------------------------->
+        <br>
+
+        <label for="tratamientoQuirurjico">Tratamiento quirurjico</label>
+        <select id="tratamientoQuirurjico" name="tratamientoQuirurjico">
+            <option value="">Seleccione una opción</option>
+            <option value="si">Sí</option>
+            <option value="no">No</option>
+        </select><br><br>
+
+        <label for="tratamientoPrevio">Tratamiento Previo</label>
+        <select id="tratamientoPrevio" name="tratamientoPrevio">
+            <option value="">Seleccione una opción</option>
+            <option value="si">Sí</option>
+            <option value="no">No</option>
+        </select><br><br>
+        
+            <label for="tecnicaQuirurjica">Tecnica Quirúrjica Propuesta</label>
+            <select id="tecnicaQuirurjica" name="tecnicaQuirurjica">
+                <option value="FUE">FUE</option>
+            </select><br><br>
+
+        <label for="tiempoDePrescripción">Tiempo de Prescripcion</label>
+        <input type="number" id="tiempoDePrescripción" name="tiempoDePrescripción"><br><br>   
+        <label for="unidadesFoliculares">Nº UF/ pelos</label>
+        <input type="number" id="unidadesFoliculares" name="unidadesFoliculares"><br><br>   
+
+        <hr>
+        <!-- -------------------------------------------------------------------------->
+        <br>
+
+        <label for="precioEspecialCirujia">Precio Especial de Cirujía</label>
+        <input type="number" id="precioEspecialCirujia" name="precioEspecialCirujia"><br><br>    
+        <label for="preciokit">Precio Kit 3 meses</label>
+        <input type="number" id="preciokit" name="preciokit"><br><br>    
+
+        <hr>
+        <!-- -------------------------------------------------------------------------->      
+        <br>
+
+        <button type="button" onclick="generatePDF()">Generar PDF</button>
+    </form>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf-lib/1.17.1/pdf-lib.min.js"></script>
+    <script src="RellenarPDF1.js"></script>
+</body>
+</html>
